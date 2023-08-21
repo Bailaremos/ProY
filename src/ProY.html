@@ -1,0 +1,217 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8"> 
+    <style> 
+        body { 
+            font-family: Arial, sans-serif; 
+            margin: 0; 
+            padding: 0; 
+        } 
+ 
+        /* Estilos para la barra de navegación */ 
+        .navbar { 
+            background-color: #22af8f; 
+            color: #fff; 
+            padding: 10px; 
+        } 
+ 
+        .navbar ul { 
+            list-style-type: none; 
+            margin: 0; 
+            padding: 0; 
+            overflow: hidden; 
+        } 
+ 
+        .navbar li { 
+            float: left; 
+        } 
+ 
+        .navbar li a { 
+            display: block; 
+            color: #fff; 
+            text-align: center; 
+            padding: 14px 16px; 
+            text-decoration: none; 
+        } 
+ 
+        .navbar li a:hover { 
+            background-color: #111; 
+        } 
+ 
+        /* Estilos para la sección de productos destacados */ 
+        .featured-products { 
+            padding: 20px; 
+            text-align: center; 
+        } 
+ 
+        .featured-products h2 { 
+            font-size: 24px; 
+            margin-bottom: 20px; 
+            color: #333; 
+        } 
+ 
+        .featured-products .product { 
+            display: inline-block; 
+            width: 200px; 
+            margin: 10px; 
+            padding: 10px; 
+            border: 1px solid #ccc; 
+            text-align: center; 
+        } 
+ 
+        .featured-products .product img { 
+            width: 150px; 
+            height: 150px; 
+            object-fit: cover; 
+            margin-bottom: 10px; 
+        } 
+ 
+        .featured-products .product h3 { 
+            font-size: 18px; 
+            margin-bottom: 5px; 
+        } 
+ 
+        .featured-products .product p { 
+            font-size: 14px; 
+            color: #666; 
+        } 
+ 
+        /* Estilos para la sección de búsqueda */ 
+        .search-section { 
+            background-color: #f2f2f2; 
+            padding: 20px; 
+            text-align: center; 
+            margin-top: 20px; 
+        } 
+ 
+        .search-section input[type="text"] { 
+            padding: 10px; 
+            width: 300px; 
+            border: 1px solid #ccc; 
+            display: inline-block; 
+        } 
+ 
+        .search-section input[type="submit"] { 
+            padding: 10px 20px; 
+            background-color: #22af8f; 
+            color: #fff; 
+            border: none; 
+            cursor: pointer; 
+            display: inline-block; 
+        } 
+ 
+        /* Estilos para las categorías */ 
+        .categories { 
+            background-color: #f2f2f2; 
+            padding: 20px; 
+            text-align: left; 
+            display: none; /* Oculta las categorías por defecto */ 
+        } 
+ 
+        .categories ul { 
+            list-style-type: none; 
+            margin: 0; 
+            padding: 0; 
+        } 
+ 
+        .categories li { 
+            margin-bottom: 10px; 
+        } 
+ 
+        .categories li a { 
+            color: #333; 
+            text-decoration: none; 
+        } 
+ 
+        .categories li a:hover { 
+            color: #22af8f; 
+        } 
+    </style> 
+    <title>ProY Shop</title> 
+</head> 
+<body> 
+    <div class="navbar"> 
+        <ul> 
+            <li><a href="#" onclick="showPage('inicio')">Inicio</a></li> 
+            <li><a href="#" onclick="showPage('tienda')">Tienda</a></li> 
+            <li><a href="#" onclick="showPage('contacto')">Contacto</a></li> 
+            <li style="float: right;"><a href="#" onclick="showPage('cuenta')">Crear Cuenta<span class="person-icon"></span></a></li> 
+        </ul> 
+    </div> 
+ 
+    <h1></h1> 
+ 
+    <div id="inicio" class="page active"> 
+        <!-- Contenido de la sección "Inicio" aquí --> 
+        <h2></h2> 
+        <!-- Agrega el contenido que deseas mostrar en la página de inicio --> 
+    </div> 
+ 
+    <div id="tienda" class="page"> 
+        <!-- Contenido de la sección "Tienda" aquí --> 
+        <h2></h2> 
+        <div class="search-section"> 
+            <input type="text" placeholder="Buscar..." oninput="showCategories(this.value)"> 
+            <input type="submit" value="Buscar"> 
+        </div> 
+        <div class="categories"> 
+            <h3>Categorías:</h3> 
+            <ul> 
+                <li><a href="#">Electrónica</a></li> 
+                <li><a href="#">Moda</a></li> 
+                <li><a href="#">Hogar</a></li> 
+                <li><a href="#">Deportes</a></li> 
+                <li><a href="#">Gaming </a></li> 
+                <!-- Agrega más categorías según tus necesidades --> 
+            </ul> 
+        </div> 
+        <div class="featured-products"> 
+            <div class="product"> 
+                <img src="imagen1.jpg" alt="Producto 1"> 
+                <h3>Producto 1</h3> 
+                <p>Precio: $$</p> 
+            </div> 
+            <div class="product"> 
+                <img src="imagen2.jpg" alt="Producto 2"> 
+                <h3>Producto 2</h3> 
+                <p>Precio: $$</p> 
+            </div> 
+            <!-- Agrega más productos con la misma estructura --> 
+        </div> 
+    </div> 
+ 
+    <div id="contacto" class="page"> 
+        <!-- Contenido de la sección "Contacto" aquí --> 
+        <h2></h2> 
+        <!-- Agrega el contenido que deseas mostrar en la seccion de "Contacto" --> 
+    </div> 
+ 
+    <div id="cuenta" class="page"> 
+        <!-- Contenido de la sección "Crear Cuenta" aquí --> 
+        <h2><h2> 
+        <!-- Agrega el contenido que deseas mostrar en la sección de crear cuenta --> 
+    </div> 
+ 
+    <script> 
+        function showPage(pageId) { 
+            var pages = document.getElementsByClassName('page'); 
+            for (var i = 0; i < pages.length; i++) { 
+                pages[i].classList.remove('active'); 
+            } 
+            document.getElementById(pageId).classList.add('active'); 
+        } 
+ 
+        function showCategories(searchValue) { 
+            var categories = document.querySelector('.categories'); 
+            if (searchValue.trim() !== '') { 
+                categories.style.display = 'block'; 
+            } else { 
+                categories.style.display = 'none'; 
+            } 
+        } 
+    </script> 
+ 
+</body> 
+</html>
